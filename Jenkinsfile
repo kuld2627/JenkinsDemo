@@ -38,7 +38,13 @@ pipeline {
             steps {
                 script {
                     // Publishing the application
+                    //bat "dotnet publish --no-restore --configuration Release --output .\\publish"
+                    
+                    // Publishing the application to a local folder (you can change this if needed)
                     bat "dotnet publish --no-restore --configuration Release --output .\\publish"
+                    
+                    // Copy the published files to the desired directory (C:\inetpub\wwwroot\JenkinsDemo)
+                    bat "xcopy /E /I /Y .\\publish\\* C:\\inetpub\\wwwroot\\JenkinsDemo\\"
                 }
             }
         }
