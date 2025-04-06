@@ -2,6 +2,7 @@ namespace JenkinsDemo
 {
     public class WeatherForecast
     {
+        //dev test property 123
         public DateOnly Date { get; set; }
 
         public int TemperatureC { get; set; }
