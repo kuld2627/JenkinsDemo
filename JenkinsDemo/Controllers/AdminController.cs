@@ -7,6 +7,7 @@ namespace JenkinsDemo.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
+        //hello 
         [HttpGet(Name = "AdminName")]
         public string Get()
         {
